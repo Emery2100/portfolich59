@@ -1,42 +1,39 @@
-header {
-    background-color: var(--surface-color);
-    height: 60px;
-    position:sticky;
-    top: 0px;
+.navbar {
+    background-color: var(--surface-color, #222) !important;
 }
 
+.navbar-brand {
+    font-family: "Lobster", cursive;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    color: var(--primary-color, #00bcd4) !important;
+}
 
-/*Right Side*/
-nav {
+.navbar-nav .nav-link {
+    color: white !important;
+    margin-left: 1rem;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-color, #00bcd4) !important;
+    border-bottom: 2px solid var(--primary-color, #00bcd4);
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+html,
+body {
+    background-color: #b1b1b1 !important;
     height: 100%;
-    width: 80%;
 }
 
-.nav-link {
-    height: 100%;
-}
-
-.nav-link a {
-    color:white;
-    font-size: 1rem;
-    text-transform: uppercase;
-    margin: 2%;
-    padding: 1% 2%;
-}
-
-.nav-link a:hover {
-    border-bottom: solid 2px white;
-}
-
-/*Hamburger button*/
-.nav-btn span {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    margin: 6px auto;
-}
-
-#nav-check, .nav-btn {
-    display: none;
+main,
+.container,
+.page-content {
+    background-color: transparent !important;
 }

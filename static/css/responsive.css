@@ -63,12 +63,14 @@ Desktop or Big screen
 
 /*Phone*/
 @media(max-width:640px) {
-    
+
     html {
         font-size: 10px;
     }
 
-    label { cursor: pointer;}
+    label {
+        cursor: pointer;
+    }
 
     header {
         height: max-content;
@@ -84,6 +86,7 @@ Desktop or Big screen
     .nav-btn {
         display: inline-flex;
     }
+
     #nav-check:not(:checked)~.nav-link {
         height: 0px;
         overflow: hidden;
@@ -101,4 +104,16 @@ Desktop or Big screen
     footer nav {
         height: fit-content;
     }
+}
+
+html,
+body {
+    background-color: #b1b1b1 !important;
+    height: 100%;
+}
+
+main,
+.container,
+.page-content {
+    background-color: transparent !important;
 }

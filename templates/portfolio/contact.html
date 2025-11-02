@@ -1,27 +1,85 @@
 {% extends "base.html" %} 
 {% load static %}
-
-{% block title %} 
-Contact 
+{% block title %}
+Contact
 {% endblock title %}
 
 {% block content %}
- <section class="contact-section center-column">
-        <h2>Contact Me</h2>
-        <p>Feel free to drop me a line below!</p>
-        <p>Email: Emery2100@yahoo.com</p>
-        <p>Phone: (123) 456-7890</p>
+<section class="contact-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-dark mb-3">Contact Me</h2>
+      <p class="text-secondary fs-5">
+        Feel free to drop me a line below — I’d love to hear from you!
+      </p>
+      <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mt-4">
+        <p class="mb-0">
+          <i class="bi bi-envelope me-2 text-primary"></i>
+          <a href="mailto:Emery2100@yahoo.com" class="text-decoration-none text-dark">
+            Emery2100@yahoo.com
+          </a>
+        </p>
+        <p class="mb-0">
+          <i class="bi bi-telephone me-2 text-primary"></i>
+          (123) 456-7890
+        </p>
+      </div>
+    </div>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section center">
-            <h2>Contact</h2>
+    <!-- Contact Form -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="fw-semibold mb-4 text-center text-dark">Send a Message</h3>
             <form class="contact-form" action="#" method="POST">
-                <input type="text" name="name" placeholder="Name" required />
-                <input type="email" name="email" placeholder="Email" required />
-                <textarea name="message" placeholder="Message" rows="5" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </section>
+              {% csrf_token %}
+              <div class="mb-3">
+                <label for="name" class="form-label fw-medium">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
 
-    </section>
+              <div class="mb-3">
+                <label for="email" class="form-label fw-medium">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label fw-medium">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary px-4 py-2">
+                  <i class="bi bi-send me-2"></i>Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock content %}

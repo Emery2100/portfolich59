@@ -1,12 +1,12 @@
 /*Variables*/
 :root {
     --primary-color: #1d9100;
- 
+
     --secondary-color: #1d9100;
-  
+
     --neutral-color: #333333;
 
-    --background-color: #b9b9b9;
+    --background-color: #919191;
 
     --surface-color: #1d9100;
 
@@ -47,7 +47,7 @@ a {
 /*Text Style*/
 h1 {
     color: var(--neutral-color);
-    font-size: 2rem; 
+    font-size: 2rem;
     text-transform: uppercase;
 }
 
@@ -64,14 +64,24 @@ p {
     font-size: 1.1rem;
 }
 
-.text-label { 
-    color:white;
+.text-label {
+    color: white;
     background-color: var(--secondary-color);
     font-size: 1.1rem;
     text-transform: uppercase;
     font-weight: 600;
     padding: 0.8rem 1.5rem;
-    cursor:initial;
+    cursor: initial;
 }
 
+html,
+body {
+    background-color: #b1b1b1 !important;
+    height: 100%;
+}
 
+main,
+.container,
+.page-content {
+    background-color: transparent !important;
+}
