@@ -25,61 +25,16 @@ Contact
         </p>
       </div>
     </div>
+  </section>
 
     <!-- Contact Form -->
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="card shadow-sm border-0">
-          <div class="card-body p-4 p-md-5">
-            <h3 class="fw-semibold mb-4 text-center text-dark">Send a Message</h3>
-            <form class="contact-form" action="#" method="POST">
-              {% csrf_token %}
-              <div class="mb-3">
-                <label for="name" class="form-label fw-medium">Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  name="name"
-                  placeholder="Your Name"
-                  required
-                />
-              </div>
-
-              <div class="mb-3">
-                <label for="email" class="form-label fw-medium">Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  name="email"
-                  placeholder="Your Email"
-                  required
-                />
-              </div>
-
-              <div class="mb-3">
-                <label for="message" class="form-label fw-medium">Message</label>
-                <textarea
-                  class="form-control"
-                  id="message"
-                  name="message"
-                  rows="5"
-                  placeholder="Your Message"
-                  required
-                ></textarea>
-              </div>
-
-              <div class="text-center">
-                <button type="submit" class="btn btn-primary px-4 py-2">
-                  <i class="bi bi-send me-2"></i>Send Message
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <section class="contact-form">
+      <h1>Contact Me</h1>
+      <form id="contact-form" method="Post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Send</button>
+        <button type="reset" class="btn btn-secondary">Cancel</button>
+      </form>
+    </section>
 {% endblock content %}
